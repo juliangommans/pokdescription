@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Pok(d)'escription!</h1>
+  <p>Search for an amalgamation of a Pokemon's description across multiple generations!</p>
+  <% if @api %>
+  <img id='sprite' src='<%= @api.sprite_img %>'> </img>
+  <%end %>
+  <table>
+    <tr>
+      <th>Enter name</th>
+      <th>Search</th>
+    </tr>
+    <tr>
+      <form id='search' action='/find' method='get'>
+        <td><input id='input' type='text' placeholder='Search for pokemon' name='pokemon'></td>
+        <td><input class='button' type='submit' value='Search'></td>
+      </form>
+    </tr>
+    </table>
+    <br>
+    <div id='pokemon name'><% if @success %>
+      <%= @api.name.capitalize %>
+      <% elsif @api %>
+    </div>
+    <p><%= "That is not a correct pokemon, please check your spelling" %></p>
+    <% end %>
+    <br>
+  <div id='results'>
+    <% if @success %>
+    <% if @api.top %>
+    <p><span id='desc'><%= @api.top.join(' ') %></span>
+    <% end %>
+    <% end %><button class='button' id='shuffle' type='button'>Shuffle</button></p>
+    <div id="loading"></div>
+  </div>
+</div>
+
+
+
+

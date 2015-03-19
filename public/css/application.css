@@ -1,0 +1,39 @@
+body { background-color: #E93A11;
+color: white;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#sprite {
+  position: relative;
+  float: right;
+}
+
+
+#input {
+  color: black;
+}
+
+.container {
+  width: 50%;
+margin: 0px auto;
+}
+
+.button {
+  background-color: #FF4418;
+}
+
+
+#results { height: 100px;
+  background-color: #CB2700;
+  border-style: solid;
+  border-color: #8A1A00;
+  border-width: 1px;
+  width:70%;
+ }
+
+#shuffle {
+  margin-top:10px;
+  width: 100px;
+  float:right;
+
+}
